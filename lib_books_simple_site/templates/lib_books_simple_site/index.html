@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vesperr Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  {% load static %}
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts DDDd-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+    <!-- Template OUR PROJ_019 CSS File -->
+    <link href="{% static 'telegram_monitor/css/proj_styles.css' %}" rel="stylesheet">
+
+    <!-- jQuery connection -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+
+    <!-- jQuery Mobile connection -->
+
+
+    <!-- Popover JS140^^ ЗАГОТОВКА-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> ПРИМ: изменяет стили сайта !!! -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .bs-example{
+          margin: 150px 50px;
+        }
+        /* Styles for custom popover template */
+        .popover-footer{
+            padding: 6px 14px;
+            background-color: #f7f7f7;
+            border-top: 1px solid #ebebeb;
+            text-align: right;
+        }
+    </style>
+
+    <!-- END Popover JS140^^ -->
+
+
+    <!-- Popup  TEST-->
+
+
+
+
+
+    <!-- END Popup  TEST-->
+
+
+  <!-- =======================================================
+  * Template Name: Vesperr
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+</head>
+
+<body>
+
+<!-- popup bookVolumes JS141^^ -->
+<style>
+  .myClass.ui-dialog{
+      width: 400px;
+    }
+
+</style>
+
+
+<div id="popupBookVolumes" title="Аудио-тома книги">
+  <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+</div>
+<!-- END div containing the popup TEST -->
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="http://127.0.0.1:6070/telegram_monitor/">Vesperr</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          
+
+
+          <li class="dropdown"><a href="#"><span>Вывести предварительные табл</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/show_downloqded_tg_messages_for_books_and_volumes">Скаченные ТГ книго-сообщения</a></li>
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/show_downloqded_tg_messages_with_logic_errors">Скаченные ТГ сообщения c ошибками</a></li>
+
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/show_book_complects_formed_from_downloaded_tg_chat_messages">Сформированные комплекты книг</a></li>
+            </ul>
+          </li>
+
+
+
+
+          <li class="dropdown"><a href="#"><span>Алгоритмы LABBA</span> <i class="bi bi-chevron-down"></i></a>
+            
+            <ul>
+              <!-- JS138^^ -->
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/analyze_and_download_messages_from_ch_id_01?tproc=load_ch_imgs">1. Скачать картинки и документы сообщений из канала 01</a></li>
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/create_and_record_book_complects_from_tg_downloads">2. Сформировать из загруженных с ТГ данных книжные комплекты</a></li>
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/register_book_complects_in_libba">3. Внести книжные комплекты в Библиотеку LABBA</a></li>
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/copy_images_from_out_to_inside_reposit">4. Перенести картинки из источника в проект</a></li>
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/fulfill_whole_message_download_and_registration_algorithm">ВЫПОЛНИТЬ ВСЕ ОПЕРАЦИИ ВЫШЕ РАЗОМ</a></li>
+
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="">------------------------</a></li>
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/load_messages_with_persistent_cycle?tproc=load_ch_imgs">ЗАГРУЗКА СООБЩЕНИЙ НАСТОЙЧИВЫМ ЦИКЛОМ</a></li>
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Управление БД</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <!-- JS138^^ -->
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_messages_tables">Очистить таблицы ТГ сообщений</a></li> 
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_book_complects_tables">Очистить таблицы книжных комплектов</a></li>
+              
+              {% comment %} <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_all_books">Удалить книги и обнулить регистры LIB</a></li>
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_registered_book_authors">Удалить зарегестрированных авторов LIB</a></li>
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_registered_book_narrators">Удалить зарегестрированных дикторов LIB</a></li>
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_book_categories">Удалить и обнулить категории LIB</a></li> {% endcomment %}
+
+
+
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_all_concerning_lib">ОИСТИТЬ ВСЕ СВЯЗАННОЕ С БИБЛИОТЕКОЙ LIB</a></li>
+
+
+
+              <li><a class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_all_functional_tables_in_whole_system">ОЧИСТИТЬ И ОБНУЛИТЬ ВСЮ СИСТЕМУ В ЦЕЛОМ</a></li>
+
+            </ul>
+          </li>
+
+          
+
+
+
+          <!-- ======= Hand Edit Preliminary Proccessed library ======= -->
+          <li class="dropdown"><a href="#"><span>Редактирование LABBA</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/show_downloaded_automatically_proccessed_books#portfolio" >Вывести предварительыне книги</a></li>
+
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/show_lib_books_to_allow_public_repositories_downloading">Статусы книг для публикации</a></li>
+
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/check_errors_in_downloaded_messages">Проверить ошибки в скаченных сообщениях</a></li>
+
+
+
+
+              <li class="dropdown"><a href="#"><span>Deep Drop Down </span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/reload_mistaken_messages_from_tg_chanel">Перезагрузить ошибочно скаченные сообщения</a></li>
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/remove_prime_message_materials_if_registered">Удалить первичку после регистрации</a></li>
+
+
+              <li>---------------------------------------</li>
+
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/book_categories_editor">Редактировать категории библиотеки</a></li> <!--  JS146^^ Показать редактор категорий -->
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/book_authors_editor">Редактировать авторов библиотеки</a></li> <!--  ^^ Показать редактор авторов -->
+              <li><a href="http://127.0.0.1:6070/telegram_monitor/book_narrators_editor">Редактировать дикторов библиотеки</a></li> <!--  ^^ Показать редактор авторов -->
+
+
+
+            </ul>
+          </li>
+          <!-- ======= END Hand Edit Preliminary Proccessed library === -->
+
+
+
+          <!-- ======= Manage own TG channels ======= -->
+          <li class="dropdown"><a href="#"><span>Управление своими ТГ-каналами</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <!-- JS138^^ -->
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/upload_approved_book_complects_to_given_own_tg_channel" >Выгрузить утвержденные комплекты в ТГ-канал</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="">------------------------</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_tg_channel?chid=-1001811098741" >Очистить главный ТГ-канал</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_tg_channel?chid=-1002014638878" >Очистить ТГ-канал Хранилище</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="">------------------------</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/clear_lib_load_registration_repositories_tables">Очистить таблицы регистр. выгрузки сообщ.</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="">------------------------</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/save_books_as_json_objects">Сохранить книги как json-обьекты</a></li>
+              <li><a  class="clear_url" style="cursor:pointer" hrefd="http://127.0.0.1:6070/telegram_monitor/load_books_objects_from_json_objects">Загрузить книги-обьекты из json-файлов</a></li>
+
+            </ul>
+          </li>
+          <!-- ======= END Manage own TG channels === -->
+
+
+          <!-- ======= Settings ======= -->
+          <li class="dropdown"><a href="#"><span>Настройки</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <!-- JS138^^ -->
+              <li><a  class="" style="cursor:pointer" href="http://127.0.0.1:6070/telegram_monitor/set_source_repositories_editor" >Источник - целевые репозитории</a></li>
+
+            </ul>
+          </li>
+          <!-- ======= END Settings === -->
+
+
+
+
+
+          <li><a class="getstarted scrollto" href="https://bootstrapmade.com/demo/Vesperr/" target="_blank">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+    {% block central_content %}
+  <!-- ======= Hero Section ======= -->
+  <!-- ======= главная домашняя секция, которая должна всегда иметь id = "hero" и находится перед секцией <main> с суб-секциями ======= -->
+  
+
+    <section id="hero" class="d-flex align-items-center">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1 data-aos="fade-up">Grow your business with Vesperr</h1>
+            <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+            <div data-aos="fade-up" data-aos-delay="800">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+            <img src="{% static 'assets/img/hero-img.png' %}" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End Hero -->
+
+    {% endblock %}
+
+  
+
+  <main id="main">
+
+
+    {% block auxillary_content %}
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients clients">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt="" data-aos="zoom-in">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    {% endblock %}
+
+
+    <!-- ======= About Us Section ======= -->
+    {% block loading_content %}
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    {% endblock %}
+
+
+
+    <!-- ======= Add Debug Section ======= -->
+    {% block add_debug_content %}
+
+  
+    {% endblock %}
+
+
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Float link back-to-top -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  
+
+  <script src="{% static 'telegram_monitor/js/proj_main.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

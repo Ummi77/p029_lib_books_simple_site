@@ -1,0 +1,966 @@
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section CSS_107^^
+--------------------------------------------------------------*/
+#hero_betta {
+    width: 100%;
+    margin-top: 70px;
+}
+
+#hero_betta h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: black;
+}
+
+#hero_betta h2 {
+    color: #484848;
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+#hero_betta .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+#hero_betta .btn-get-started:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+#hero_betta .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (min-width: 1024px) {
+    #hero_betta {
+    background-attachment: fixed;
+    }
+}
+
+@media (max-width: 991px) {
+    #hero_betta {
+    height: 100vh;
+    }
+
+    #hero_betta .animated {
+    animation: none;
+    }
+
+    #hero_betta .hero-img {
+    text-align: center;
+    }
+
+    #hero_betta .hero-img img {
+    width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero_betta {
+    margin-top: 20px;
+    }
+
+    #hero_betta h1 {
+    font-size: 28px;
+    line-height: 36px;
+    }
+
+    #hero_betta h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    }
+
+    #hero_betta .hero-img img {
+    width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    #hero_betta .hero-img img {
+    width: 80%;
+    }
+}
+
+@keyframes up-down {
+    0% {
+    transform: translateY(10px);
+    }
+
+    100% {
+    transform: translateY(-10px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Стиль таблицы с выводом помесячных выплат по купонам , матрица помесячных выплат */
+
+.table-condensed {
+    font-size:14px !important
+}
+ /* END Стиль таблицы с выводом помесячных выплат по купонам , матрица помесячных выплат */
+
+ /* Стили пагинатора */
+
+
+.pagination {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: DarkSeaGreen;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+/* END Стили пагинатора */
+
+
+/* Стили всплывающего popover */
+
+/* Popover */
+.popover {
+    border: 0px dotted red;
+}
+/* Popover Header */
+.popover-title {
+    background-color: #73AD21; 
+    color: #FFFFFF; 
+    font-size: 20px;
+    text-align:center;
+}
+/* Popover Body */
+.popover-content {
+    background-color: coral;
+    color: #FFFFFF;
+    padding: 25px;
+}
+/* Popover Arrow */
+.arrow {
+    border-right-color: red !important;
+}
+
+
+.popover_select {
+    border: 2px solid #73AD21;
+}
+
+.label_popover_isin {
+    border: 2px dotted #73AD21;
+    border-style: dotted dotted none dotted;
+}
+
+
+.btn-inx-pkg-pop{
+    width: 100px;
+    border: 2px solid #73AD21;
+    color: #73AD21;
+
+}
+
+.btn-inx-pkg-pop:hover{
+    width: 100px;
+    border: 2px solid #73AD21;
+    color: #ffffff;
+    background-color: #73AD21; 
+
+}
+ /* END This is a single-line comment */
+
+
+ /* Стили для заголовков */
+
+h1 {
+font-size: 36px;
+line-height: 40px;
+}
+
+h2 {
+font-size: 30px;
+line-height: 40px;
+}
+
+h3 {
+font-size: 24px;
+line-height: 40px;
+}
+
+h4 {
+margin: 1em 0 0.5em 25px;
+
+font-family: 'Titillium Web', sans-serif;
+position: relative;
+text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+font-size: 12px;
+color: #BF8F30;
+text-transform: uppercase;
+}
+
+ /* END  Стили для заголовков */
+
+
+ /* Стили для горизонтального вывода подразделов в тэге ul для филььтрации облигаций по месяцам выплат по купонам */
+
+.div_container {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.ul_li_inline li{
+    display: inline; /*  расположение в горизонтальную линию */
+    margin-right: 5px;
+    }
+
+.ul_li_inline{
+    padding-left: 40px;
+}
+
+
+.ul_li_inline li a{
+    text-decoration: none;
+    color:#1D7373;
+    margin-right: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+} 
+
+
+.ul_li_inline li a:hover{
+    color:#FF7400;
+} 
+
+
+.ul_li_inline li a.active{
+    color:#FF7400;
+} 
+ /* END Стили для горизонтального вывода подразделов в тэге ul для филььтрации облигаций по месяцам выплат по купонам */
+
+
+
+/* Стили для переключающихся фолдеров при выводе портфолио и индексных пакетов по месЯцам */
+/*http://127.0.0.1:9050/bonds_dj_app/index_packages_portfolio_by_month_folders?payment_month=1&monthNavFor=index_packages */
+
+
+.nav-tabs .nav-link {
+    color: gray;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #000000;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.nav-tabs .nav-link.active {
+    color: #000000;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 3px solid grey;
+}
+
+ /* END Стили для переключающихся фолдеров при выводе портфолио и индексных пакетов по месЯцам */
+
+
+
+ /* Стили для разделов и подразделов левого навигатора: */
+
+.group2 {
+    color: #008000;
+
+}
+
+.group3 {
+    color: #FF5F1F;
+
+}
+
+ /* END Стили для разделов и подразделов левого навигатора */
+
+
+ /* Стили для полей формы */
+
+.form-control {
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5F8575;
+    width: 500px;
+    }
+
+.btn[type=submit] {
+    width: 100px;
+}
+
+ /* END Стили для полей формы */
+
+ /* Стили для информационных плашек в верху страниц */
+
+
+.top_row_nav_card{
+    height: 130px;
+}
+
+
+.card-title span {
+    cursor:pointer;
+}
+
+.breadcrumb-item span{
+    color: #2AAA8A;
+    font-weight: bold;
+}
+
+
+.card-body textarea{
+
+    width: 350px;
+    height: 75px;
+}
+
+
+
+/* END Стили для информационных плашек в верху страниц */
+
+
+/* Стили для календаря в крайней справа навигационной плашке первого ряда */
+
+.calend_first_row {
+
+margin-top: 10px;
+
+}
+
+
+.calend_second_row input{
+
+    margin-top: 15px;
+    /*color: red */
+}
+
+.calend_second_row img{
+
+    margin-right: 10px;
+    /*color: red */
+}
+
+/* END Стили для календаря в крайней справа навигационной плашке первого ряда */
+
+
+
+
+
+/* Стили для отображения параметров лота при продаже и переносе в историю */
+
+
+.card-title span:hover{
+
+    color: #2AAA8A;
+
+}
+/* END Стили для отображения параметров лота при продаже и переносе в историю */
+
+
+
+
+/* Стили для содержимого служебных плашек  */
+
+/* Стили для поисковых окошек   */
+.srch_bought_tbs{
+
+    width: 200px;
+
+}
+/* END Стили для отображения параметров лота при продаже и переносе в историю */
+
+
+
+/* Стили для разделов и подразделов левого меню */
+
+
+.nav-content li a.active{
+    color:#FF7400;
+} 
+
+
+/* END Стили для разделов и подразделов левого меню */
+
+
+
+
+/* Стили для фолдеров с описаниями компании на информационной странице облигации */
+
+.cdescr_fold_title button span{
+    color:#a33706;
+    font-size: 16px;
+    font-weight: bold;
+} 
+
+
+
+
+.comp_descr_folds div{
+    color:#0e0d0d;
+    font-size: 18px;
+
+} 
+
+
+.comp_descr_folds .comp_descr_sector_title{
+    color:#541c1c;
+    font-size: 18px;
+    font-weight: bold;
+} 
+
+
+.comp_descr_folds .comp_descr_subsector_title{
+    color:#3d288a;
+    font-size: 16px;
+    font-weight: bold;
+} 
+
+/* END Стили для фолдеров с описаниями компании на информационной странице облигации */
+
+
+
+
+
+
+
+
+
+
+/* Стили для таблицы с выделением цветом при нажатии CSS_105^^ */
+
+.color_table { 
+    border: 1px solid black; 
+    border-collapse: collapse; 
+    margin: 0 auto; 
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.color_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #89CFF0;
+    color: black;
+}
+
+
+.color_table th a{
+
+    color: #6E260E;
+}
+
+.color_table td, .color_table th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+
+
+/*.color_table tr:hover {background-color: #ddd;}*/
+
+
+.alternate_color { background-color: #f5f5dc; }
+
+
+.hover_color { 
+    background-color: #eeeee6 !important; 
+}
+
+.click_color_1 { 
+    background-color:BurlyWood; 
+}
+
+.click_color_2 { 
+    background-color:LightPink; 
+}
+
+.click_color_3 { 
+    background-color:DarkSeaGreen; 
+}
+
+.click_color_4 { 
+    background-color:#90ee90; 
+}
+
+.click_color_5 { 
+    background-color:#ff6633; 
+}
+
+
+.click_color_6 { 
+    background-color:#cccccc; 
+}
+
+
+.click_color_7 { 
+    background-color:#ff9933; 
+}
+
+.click_color_8 { 
+    background-color:#ffffcc; 
+}
+
+
+.click_color_9 { 
+    background-color:#818f55; 
+}
+
+
+/* END Стили для таблицы с выделением цветом при нажатии */
+
+
+
+
+/* Стили для выделения рядов по типу облигаций */
+
+.corp_row_css {
+
+    background-color:#ffffff;
+    cursor: pointer;
+}
+
+.ofz_row_css {
+
+    background-color:#e6d6a1;
+    cursor: pointer;
+}
+
+
+.munic_row_css {
+
+    background-color:#8fd6e2;
+    cursor: pointer;
+}
+/* END Стили для выделения рядов по типу облигаций */
+
+
+
+
+/*   CSS_104^^ Стили для квадратиков с цветами и переключателя  */
+
+.row_color_box {
+    float: left;
+    height: 25px;
+    width: 25px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    clear: both;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.cst1 {
+    background-color: BurlyWood;
+}
+
+.cst2 {
+    background-color: LightPink;
+}
+
+.cst3 {
+    background-color: DarkSeaGreen;
+}
+
+.cst4 {
+    background-color: #90ee90;
+}
+
+
+.cst5 {
+    background-color: #ff6633;
+}
+
+
+.color-switch {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+/* END Стили для квадратиков с цветами  */
+.tb_row_markers_indx_packgs {
+    float: left;
+    height: 10px;
+    width: 25px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    clear: both;
+    margin-right: 15px;
+
+}
+
+/* .tb_row_ip_markers_cst1 {
+    background-color: BurlyWood;
+}
+
+.tb_row_ip_markers_cst2 {
+    background-color: LightPink;
+}
+
+.tb_row_ip_markers_cst3 {
+    background-color: DarkSeaGreen;
+}
+
+.tb_row_ip_markers_cst4 {
+    background-color: #90ee90;
+} */
+
+
+.color-switch {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+
+
+/* Стили для цветовых маркеров для выделяемых рядов в табоице Индексных пакетов  */
+
+
+
+/* END Стили для цветовых маркеров для выделяемых рядов в табоице Индексных пакетов */
+
+
+
+/* Ссылки в ячейках таблиц  */
+
+.table tbody tr td a{
+    color: #0f0f0f;
+}
+
+
+.color_table tbody tr td a{
+    color: #0f0f0f;
+}
+
+/* END Ссылки в ячейках таблиц   */
+
+
+
+/* Стили заголовков в поисковой плашке информационной странице компании средняя вверху из трех */
+
+
+.card_title_middle_col {
+    padding: 5px 0 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #012970;
+    font-family: "Poppins", sans-serif;
+}
+
+.card_title_middle_col span {
+    color: #899bbd;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card_body_middle_col {
+    padding: 0 20px 20px 20px;
+}
+
+
+
+/* END Стили заголовков в поисковой плашке информационной странице компании средняя вверху из трех */
+
+
+
+
+
+/* Стили для выделения рядов по определенному индексному пакету */
+
+.inx_package_row_css_5 {  /* Индексный пакет AB */
+
+    background-color: #7ddf92 ;
+
+}
+
+.inx_package_row_css_6 { /* Индексный пакет A */
+
+    background-color:#37caaa;
+
+}
+
+
+.inx_package_row_css_7 { /* Индексный пакет AC */
+
+    background-color:#ee9a4c;
+
+}
+
+
+.inx_package_row_css_8 { /* Индексный пакет OFERT */
+
+    background-color:#e7f18b;
+
+}
+
+
+.inx_package_row_css_9 { /* Индексный пакет LOW_GKD */
+
+    background-color:#f77272;
+
+}
+
+
+.inx_package_row_css_10 { /* Индексный пакет POTENTIAL */
+
+    background-color:#abc6e9;
+
+}
+
+
+.inx_package_row_css_11 { /* Индексный пакет NEGATIVE */
+
+    background-color:#a9b1bb;
+
+}
+
+
+.inx_package_row_css_12 { /* Индексный пакет OBSERVE */
+
+    background-color:#b7a3c9;
+
+}
+
+
+.inx_package_row_css_13 { /* Индексный пакет CALL_OFFERT */
+
+    background-color:#e7cc9a;
+
+}
+
+
+/* END Стили для выделения рядов по определенному индексному пакету */
+
+
+
+/* Стили для выделения рядов в индексных пакетов для облигаций, которые уже находятся в портфолио */
+
+
+.diff_color_00 {
+
+    background-color:#e5ec7e;
+    /* background-color:#99bd99; */
+
+}
+
+.diff_color_01 {
+
+    background-color:#dbfad8;
+    /* background-color:#99bd99; */
+
+}
+
+/* END Стили для выделения рядов в индексных пакетов для облигаций, которые уже находятся в портфолио */
+
+
+/* CSS_COLOR_101^^ : Стили для выделения рядов в индексных пакетов для облигаций, которые имеют позитивную delta */
+
+.diff_color_02 { /* Позитивные Дельта в индексных пактах */
+
+    background-color:#64d385;
+
+}
+
+.diff_color_03 { /* Негативные Дельта в индексных пактах */
+
+    background-color:#f3ccd9;
+
+}
+
+
+.diff_color_04 { /* Поле Comp cf = None (ОФЗ и Муниц в индексных пакетах) */
+
+    background-color:#baf5f7;
+
+}
+
+
+
+.diff_color_05 { /* Поле Comp cf = None (Корпоративы, у которых не заданы коэфф риска) */
+
+    background-color:#eed592;
+
+}
+
+
+
+
+/* END CSS_COLOR_101^^ : Стили для выделения рядов в индексных пакетов для облигаций, которые имеют позитивную delta */
+
+
+/* CSS_101^^ : Стили для оформления index packages set and results on index packages table page */
+
+
+.tb_ip_set_and_results tr td{
+
+    padding-left: 50px;
+
+}
+
+.tb_ip_set_and_results tr td label{
+
+    color: #344872;
+
+}
+
+
+.ip_analithics_result{
+
+    color: #6d185a;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+/* END CSS_101^^ : Стили для оформления index packages set and results on index packages table page */
+
+
+
+
+
+/* CSS_102^^ : Стили для оформления индексных пакетов по архивным проекциям с расширением (все) */
+
+
+.all_inx_pckgs{
+
+    color: #e06818;
+
+
+}
+
+
+/* END CSS_102^^ : Стили для оформления индексных пакетов по архивным проекциям с расширением (все) */
+
+
+
+
+
+/* CSS_103^^ : Стили для оформления ячеек таблицы индексных пакетов */
+
+
+.diff_cell_color_01 { /* */
+
+    background-color:#FFC300;
+
+}
+
+
+
+.diff_cell_color_02 { /* */
+
+    background-color:#40B5AD;
+
+}
+
+/* END CSS_103^^ : Стили для оформления ячеек таблицы индексных пакетов */
+
+
+
+
+/* CSS_106^^ : Стили для оформления параметров мульти-лотов на странице отрегистрации лотов из сисемы стр  : bonds_dj_app/templates/unregister_multiples_bought_lots.html  */
+
+.isin_multi_lots {
+    
+    border: 1px solid;
+    margin-bottom: 50px;
+    border-color: rgb(84, 197, 212);
+}
+
+
+.isin_multi_lots td{
+    
+    padding-left: 50px;
+}
+
+
+
+
+
+.isin_multi_lots td:nth-child(3) {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+
+.unreg_multi_lot_bond_title {
+    font-weight: bold;
+    color: #58c44e;
+
+
+}
+
+
+
+/* END CSS_106^^ : Стили для оформления параметров мульти-лотов на странице отрегистрации лотов из сисемы стр  : bonds_dj_app/templates/unregister_multiples_bought_lots.html  */
+
+
+
+/* контекстное меню правого клика just some css to display it https://stackoverflow.com/questions/4747789/right-click-context-menu-jquery */
+
+.menu {
+    background: #fff;
+    width: 60px;
+    padding: 3px 10px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, .3);
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+  }
