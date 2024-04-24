@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Registrate modules:
+    'lib_books_simple_site.apps.LibBooksSimpleSiteConfig'
+    
 ]
 
 MIDDLEWARE = [
@@ -88,6 +92,18 @@ DATABASES = {
  'PORT': '',
  }
 }
+
+
+# DATABASES = {
+#  'default': {
+#  'ENGINE': 'django.db.backends.mysql',
+#  'NAME': 'books_site',
+#  'USER': 'booksite_admin',
+#  'PASSWORD': '7731',
+#  'HOST': 'localhost',
+#  'PORT': '',
+#  }
+# }
 
 
 # Password validation

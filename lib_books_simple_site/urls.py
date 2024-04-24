@@ -9,4 +9,3 @@ app_name='lib_books_simple_site'
 urlpatterns = [
     path('', views.index, name='index'),
 ]
-
