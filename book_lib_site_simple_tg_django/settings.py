@@ -146,7 +146,7 @@ STATIC_URL = 'static/'
 # ~ https://djangodeployment.readthedocs.io/en/latest/05-static-files.html  !!
 # STATIC_ROOT ="/home/django/static/"
 
-STATIC_ROOT = '/var/book_lib_site_simple_tg_django/static/'
+STATIC_ROOT = '/var/cache/book_lib_site_simple_tg_django/static/'
 
 
 
