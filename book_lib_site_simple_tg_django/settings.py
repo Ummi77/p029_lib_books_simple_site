@@ -11,9 +11,17 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+
+
+HOME_DIR = os.path.expanduser("~")
+# print(HOME_DIR)
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -146,7 +154,7 @@ STATIC_URL = 'static/'
 # ~ https://djangodeployment.readthedocs.io/en/latest/05-static-files.html  !!
 # STATIC_ROOT ="/home/django/static/"
 
-STATIC_ROOT = '/var/cache/book_lib_site_simple_tg_django/static/'
+STATIC_ROOT = f'{HOME_DIR}/django/book_lib_site_simple_tg_django/static/'
 
 
 
