@@ -6,9 +6,16 @@ from noocube.sqlite_connection import MysqlConnection
 DEBUG_ = True
 
 
-# Подключение к SQLite
+# Подключение к MariaDB
 
-DB_CONNECTION = MysqlConnection(dbName = 'books_site')
+dbData = {
+    
+    'user' : 'books_site_admin',
+    'pass' : 'bsa7731',
+    'dbName' : 'books_site',
+}
+
+DB_CONNECTION = MysqlConnection(dbData)
 
 
 

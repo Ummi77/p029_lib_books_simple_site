@@ -8,12 +8,12 @@ from noocube.pandas_manager import PandasManager
 from noocube.sqlite_processor_speedup import SqliteProcessorSpeedup
 from noocube.sqlite_pandas_processor_speedup import SqlitePandasProcessorSpeedup
 from beeprint import pp
-from noocube.files_manager import FilesManager
-import noocube.funcs_general as FG
-from lib_books_simple_site.local_classes.tg_local_funcs import TgLocalFuncs
-from lib_books_simple_site.local_classes.stractures import LibUniqueMessage
+# from noocube.files_manager import FilesManager
+# import noocube.funcs_general as FG
+# from lib_books_simple_site.local_classes.tg_local_funcs import TgLocalFuncs
+# from lib_books_simple_site.local_classes.stractures import LibUniqueMessage
 
-from noocube.switch import Switch
+# from noocube.switch import Switch
 
 # from noocube.funcs_general_class import FunctionsGeneralClass
 
@@ -33,7 +33,7 @@ class BookLibraryFuncsBss ():
 
         self.sps = SqliteProcessorSpeedup(ms.DB_CONNECTION) # Обьект класса SqliteProcessorSpeedup
         self.spps = SqlitePandasProcessorSpeedup(ms.DB_CONNECTION) # Обьект класса SqlitePandasProcessorSpeedup
-        self.tlf = TgLocalFuncs()
+        # self.tlf = TgLocalFuncs()
         self.pd = PandasManager()
     
 
