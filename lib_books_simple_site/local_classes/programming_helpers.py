@@ -4,12 +4,17 @@ from noocube.files_manager import FilesManager
 
 # Динамическое подключение settings_bdp_main в корне проекта
 import sys
-sys.path.append('/home/ak/projects/P21_Telegram_Channel_Parsing_Django/telegram_channel_parsing_django')
-import settings_bdp_main as ms # общие установки для всех модулей
+sys.path.append('/home/ak/projects/P029_book_lib_site_simple_tg_django/book_lib_site_simple_tg_django')
+
+import lib_books_simple_site.settings_bdp_main as ms # общие установки для всех модулей
 
 from noocube.funcs_general_class import FunctionsGeneralClass
 
-from telegram_monitor.local_classes.local_funcs import LocalFunctions
+# from lib_books_simple_site.local_classes.local_funcs import LocalFunctions
+
+from lib_books_simple_site.local_classes.local_funcs import LocalFunctions
+
+from noocube.text_formater import TextFormater
 
 
 
@@ -39,6 +44,23 @@ class ProgrammingHelpers():
         """
         
         
+        
+        
+        
+        
+    @staticmethod
+    def devide_db_dump_by_given_marker_static (textSourceFile, srchMarker, targetFile, breakLine = '\n', linetimes = 1, before = True, textReplaceDic = []):
+        """ 
+        РАзделить тектовый файл после-перед найденными маркерами определеннымми линиями-разделителями
+        """
+
+        FilesManager.devide_text_in_file_by_given_marker_and_save_to_another_file_static (textSourceFile, srchMarker, targetFile, breakLine = breakLine, linetimes = linetimes, before = True, textReplaceDic = textReplaceDic)
+        
+
+
+
+
+
 
 
 
@@ -124,6 +146,29 @@ class ProgrammingHelpers():
 
 if __name__ == '__main__':
     pass
+
+
+
+    # ПРОРАБОТКА: Разделение текста линиями , перед найденными маркерами 
+    
+    srchMarker = 'CREATE'
+    
+    textSourceFile = '/media/ak/Transcend1/GENERAL_ARCHIVE_EXTERNAL_DISC_FROM_01_02_2024_CURRENT_MAIN/ARCHIVE_MYSQL_PROJS_DB/PRJ_021/LOGIC_BACKUP/labba__Дамп_структуры_БД_локального_PC_27_04_2024_07_29.struct'
+    
+    
+    fileTarget = '/home/ak/projects/P029_book_lib_site_simple_tg_django/PRJ029_DB_Structures/PRJ029_BD_structures.txt'
+    
+    textReplaceDic = {
+        
+        '/*!40101 SET character_set_client = @saved_cs_client */;' : '',
+        '/*!40101 SET @saved_cs_client     = @@character_set_client */;' : '',
+        '/*!40101 SET character_set_client = utf8 */;' : '',
+    }
+
+
+    ProgrammingHelpers.devide_db_dump_by_given_marker_static (textSourceFile, srchMarker, fileTarget, breakLine = '\n', linetimes = 3, before = True, textReplaceDic = textReplaceDic)
+
+
 
 
 
