@@ -85,6 +85,12 @@ def api_update_bss_options_table (request):
     
     dicDbOptionsTables = json.loads(jsonDbOptionsTables)
     
+    
+    
+    print(f"PR_B517 --> dicDbOptionsTables")
+    pp(dicDbOptionsTables)
+
+
 
     
 
@@ -112,8 +118,7 @@ def api_update_bss_options_table (request):
                 
                 dicTbCategories = {int(key) : val for key, val in dicTbCategories.items()}
                 
-                print(f"PR_B509 --> dicTbCategories")
-                pp(dicTbCategories)
+
                 
                 # 1. Очищение опционной таблицы  'lib_categories'
                 
@@ -126,21 +131,113 @@ def api_update_bss_options_table (request):
                 
                 blfbss.api_insert_categories_from_dic_tb_data_bss(dicTbCategories)
                 
+                break
+            
+            if case('dicTbLibAuthors'): 
                 
+                print(f"PR_B518 --> SYS LOG: Сделать UPDATE таблиы 'lib_authors' на основе данных в суб-словаре dicTbLibAuthors")
+                
+                # INI
+                dicTbLibAuthors = val
+                
+                # Перевод поля id в цифровой вид
+                
+                dicTbLibAuthors = {int(key) : val for key, val in dicTbLibAuthors.items()}
+                
+                print(f"PR_B509 --> dicTbLibAuthors")
+                pp(dicTbLibAuthors)
+                
+                
+                # 1. Очищение опционной таблицы  'lib_authors'
+                
+                sps.truncate_table_mysql_sps(ms.TB_LIB_AUTHORS)
+                print(f"PR_B521 --> SYS LOG: Удалены записи и обнулена таблица 'lib_authors'")
+                
+                # 2. Запись по новой всех опционных данных таблицы 'lib_categories' из данных словаря dicTbCategories
+                # ПРИМ: предварительно удален автоинкремент для id  в табл 'lib_categories' (так как эта таблица, как и другие в этой БД, 
+                # лишь проекции первичных таблиц в проекте PRJ021) {_ВСЕ_РАБОТАЕТ_}
+                
+                # PARS
+                
+                tbName = ms.TB_LIB_AUTHORS
+                
+                dicTbAuthorsFields = {
                     
+                    'firstName' : 'author_first_name',
+                    'secondName' : 'author_second_name',
+                    'fullName' : 'author_full_name',
+                }
+                
+                blfbss.api_insert_persons_from_dic_tb_data_bss( tbName, dicTbLibAuthors, dicTbAuthorsFields)
+
                 break
             
-            if case('2'): 
-                pass
+            if case('dicTbLibLanguages'): 
+                
+                print(f"PR_B519 --> SYS LOG: Сделать UPDATE таблиы 'lib_languages' на основе данных в суб-словаре dicTbLibLanguages")
+                
+                
+                # INI
+                dicTbLibLanguages = val
+                
+                # Перевод поля id в цифровой вид
+                
+                dicTbLibLanguages = {int(key) : val for key, val in dicTbLibLanguages.items()}
+
+                # 1. Очищение опционной таблицы  'lib_languages'
+                
+                sps.truncate_table_mysql_sps(ms.TB_LIB_LANGUAGES)
+                print(f"PR_B530 --> SYS LOG: Удалены записи и обнулена таблица 'lib_languages'")
+                
+                # 2. Запись по новой всех опционных данных таблицы 'lib_languages' из данных словаря dicTbCategories
+                # ПРИМ: предварительно удален автоинкремент для id  в табл 'lib_languages' (так как эта таблица, как и другие в этой БД, 
+                # лишь проекции первичных таблиц в проекте PRJ021)
+                
+                blfbss.api_insert_languages_from_dic_tb_data_bss(dicTbLibLanguages)
+
                 break
             
-            if case('3'): 
-                pass
+            if case('dicTbLibNarrators'): 
+                
+                print(f"PR_B531 --> SYS LOG: Сделать UPDATE таблиы 'lib_narrators' на основе данных в суб-словаре dicTbLibNarrators")
+                
+                
+                # INI
+                dicTbLibNarrators = val
+                
+                # Перевод поля id в цифровой вид
+                
+                dicTbLibNarrators = {int(key) : val for key, val in dicTbLibNarrators.items()}
+                
+                print(f"PR_B532 --> dicTbLibNarrators")
+                pp(dicTbLibNarrators)
+                
+                
+                # 1. Очищение опционной таблицы  'lib_narrators'
+                
+                sps.truncate_table_mysql_sps(ms.TB_LIB_NARRATORS)
+                print(f"PR_B533 --> SYS LOG: Удалены записи и обнулена таблица 'lib_narrators'")
+                
+                # 2. Запись по новой всех опционных данных таблицы 'lib_categories' из данных словаря dicTbCategories
+                # ПРИМ: предварительно удален автоинкремент для id  в табл 'lib_categories' (так как эта таблица, как и другие в этой БД, 
+                # лишь проекции первичных таблиц в проекте PRJ021) {_ВСЕ_РАБОТАЕТ_}
+                
+                # PARS
+                
+                tbName = ms.TB_LIB_NARRATORS
+                
+                dicTbNarratorsFields = {
+                    
+                    'firstName' : 'narrator_first_name',
+                    'secondName' : 'narrator_second_name',
+                    'fullName' : 'narrator_full_name',
+                }
+                
+                blfbss.api_insert_persons_from_dic_tb_data_bss( tbName, dicTbLibNarrators, dicTbNarratorsFields)
+
                 break
             
-            if case('4'): 
-                pass
-                break
+            
             
             if case(): # default
                 print('PR_B510 --> Другое')

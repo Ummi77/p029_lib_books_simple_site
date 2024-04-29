@@ -109,6 +109,10 @@ TB_LIB_SOURCES_ASSIGNED_REPOSITORIES = 'lib_sources_assigned_repositories'
 TB_LIB_BOOKS_ASSIGNED_REPOSITORIES = 'lib_books_assigned_repositories'
 
 
+TB_LIB_LANGUAGES = 'lib_languages'
+
+
+
 
 
 TB_TG_BOOK_COMPLECTS_CH_01 = 'tg_book_complects_ch_01'
