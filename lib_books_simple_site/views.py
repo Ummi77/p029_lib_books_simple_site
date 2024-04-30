@@ -92,7 +92,10 @@ def api_update_bss_options_table (request):
 
 
 
-    
+    dicDebug = {
+        
+        
+    }
 
     
     # B. Цикл по пришедшим данным по опционным таблицам из БД 'labba' c проекта PRJ021 с их дифференциированной обработкой
@@ -110,6 +113,8 @@ def api_update_bss_options_table (request):
             if case('dicTbCategories'): 
                 
                 print(f"PR_B511 --> SYS LOG: Сделать UPDATE таблиы 'lib_categories' на основе данных в суб-словаре dicTbCategories")
+                
+                dicDebug['case dicTbCategories'] = "PR_B511 --> SYS LOG: <br>"
                 
                 # INI
                 dicTbCategories = val
@@ -136,6 +141,8 @@ def api_update_bss_options_table (request):
             if case('dicTbLibAuthors'): 
                 
                 print(f"PR_B518 --> SYS LOG: Сделать UPDATE таблиы 'lib_authors' на основе данных в суб-словаре dicTbLibAuthors")
+                
+                dicDebug['case dicTbLibAuthors'] = "PR_B518 --> SYS LOG: "
                 
                 # INI
                 dicTbLibAuthors = val
@@ -176,6 +183,8 @@ def api_update_bss_options_table (request):
                 
                 print(f"PR_B519 --> SYS LOG: Сделать UPDATE таблиы 'lib_languages' на основе данных в суб-словаре dicTbLibLanguages")
                 
+                dicDebug['case dicTbLibLanguages'] = "PR_B519 --> SYS LOG: "
+                
                 
                 # INI
                 dicTbLibLanguages = val
@@ -200,6 +209,8 @@ def api_update_bss_options_table (request):
             if case('dicTbLibNarrators'): 
                 
                 print(f"PR_B531 --> SYS LOG: Сделать UPDATE таблиы 'lib_narrators' на основе данных в суб-словаре dicTbLibNarrators")
+                
+                dicDebug['case dicTbLibNarrators'] = "PR_B531 --> SYS LOG: "
                 
                 
                 # INI
@@ -246,11 +257,34 @@ def api_update_bss_options_table (request):
 
 
 
+
+
+    # XXVI. ОБРАБОТКА ДЕБАГ-СЛОВАРЯ ДЛЯ ОТПРАВКИ В HttpResponse(debugHtml)
+
+    # Обработка оезультата дебага
+    debugHtml = "<table>"
+    
+    for key, val in dicDebug.items():
+        pass
+        
+        debugHtml += f"<tr><td>{key}</td><td>{val}</td></tr>"
+        
+    
+    debugHtml += "</table>"
+
+
+    # context = {
+        
+    #     'dicDebug' : dicDebug,
+    # }
+
+
     # Возвращаемые данные методу, запустившему процессы AJAX
     # ret = 'ГОТОВО'
     print(f"--> END {prStartEnd['prEnd']} --> : {request.resolver_match.view_name}()") # Маркер завершения метода для лога в консоли
     
-    return HttpResponse()
+    return HttpResponse(debugHtml)
+    # return render(request, 'lib_books_simple_site/debug_results.html', context = context)
 
 
 
@@ -260,7 +294,53 @@ def api_update_bss_options_table (request):
 
 
 
+@csrf_exempt # декоратор необходимый для работы с POST (с формами)
+def debug_results (request):
+    """ 
+    Для тестирования сервера на NGINX по http порту 80
 
+    """
+    # I. НАстройка распечаток названия View (и их прописание вверху и внизу: START & END)
+    prStartEnd = {
+        'prStart' : 'PR_B534',
+        'prEnd' : 'PR_B535',
+    }
+    print(f"--> START {prStartEnd['prStart']} --> : {request.resolver_match.view_name}()") # Маркер старта метода для лога в консоли
+    
+    # III. Инициализация сквозного словаря dicThrough для текущего View на уровне noocube (уровень универсализации) и необходимых функциональных обьектов
+    
+    dvm = DjangoViewManager_V3(request)
+    blfbss = BookLibraryFuncsBss()
+    sps = SqliteProcessorSpeedup(ms.DB_CONNECTION)
+    # sdm = SysDevelopManager()
+    spps = SqlitePandasProcessorSpeedup(ms.DB_CONNECTION) 
+    
+    # IV. Аналитическая, исполнительная часть и подготовка процедурных фреймов
+    
+    # Получение  json-формы обьекта опционных таблиц из requestPost
+    # jsonDbOptionsTables = dvm.dicThrough['requestDicPost'] ['jsonDbOptionsTables']
+    
+    # A. Перевод json-формы обьекта в обьект: словарь
+    
+    # dicDbOptionsTables = json.loads(jsonDbOptionsTables)
+    
+    
+    
+    # print(f"PR_B536 --> dicDbOptionsTables")
+    # pp(dicDbOptionsTables)
+
+    context = {
+        
+        
+    }
+
+
+    # Возвращаемые данные методу, запустившему процессы AJAX
+    # ret = 'ГОТОВО'
+    print(f"--> END {prStartEnd['prEnd']} --> : {request.resolver_match.view_name}()") # Маркер завершения метода для лога в консоли
+    
+    # return HttpResponse()
+    return render(request, 'lib_books_simple_site/debug_results.html', context = context)
 
 
 

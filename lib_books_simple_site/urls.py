@@ -23,5 +23,13 @@ urlpatterns += [
 
 
 
+urlpatterns += [
+    path('debug_results', views.debug_results, name='debug_results'),
+]
+
+
+
+
+
 
 

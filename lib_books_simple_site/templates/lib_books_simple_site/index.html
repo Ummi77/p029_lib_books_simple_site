@@ -104,7 +104,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="#">Vesperr</a></h1>
+        <h1><a href="{% url 'lib_books_simple_site:index' %}">Vesperr</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -128,7 +128,9 @@
           </li>
 
 
+          <li class="dropdown"><a href="{% url 'lib_books_simple_site:debug_results' %}"><span>DEBUG</span> <i class="bi bi-chevron-down"></i></a>
 
+          </li>
 
 
           <li class="dropdown"><a href="#"><span>Личный кабинет</span> <i class="bi bi-chevron-down"></i></a>
@@ -179,7 +181,7 @@
 
     {% block auxillary_content %}
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients clients">
+    <section id="clients" class="clients clients section_css">
       <div class="container">
 
         <div class="row">

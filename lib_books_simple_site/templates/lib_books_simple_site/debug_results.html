@@ -1,0 +1,95 @@
+
+
+{% extends "lib_books_simple_site/index.html" %}
+
+{% load static %}
+
+
+
+
+{% block central_content %}
+
+<style type="text/css">
+    .debug_table tr td {
+        border: 1px solid maroon; 
+    }
+
+</style>
+
+
+<section id="hero" class="d-flex align-items-center">
+
+
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2 data-aos="fade-up" data-aos-delay="400">Debug</h2>
+
+
+
+            <table class="debug_table">
+
+                <tr>
+        
+                    <td>dicDebug</td>
+                    <td>{{dicDebug}}</td>
+                    <td></td>
+        
+                </tr>
+        
+        
+                <tr>
+        
+                    <td></td>
+                    <td></td>
+                    <td></td>
+        
+                </tr>
+        
+        
+            </table>
+        
+
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</section><!-- End Hero -->
+
+
+{% endblock %}
+
+
+{% block loading_content %}
+
+
+
+{% endblock %}
+
+
+
+
+{% comment %} {% block auxillary_content %}
+
+
+
+
+{% endblock %} {% endcomment %}
+
+
+
+
+
+{% block add_debug_content %}
+
+  
+{% endblock %}
+
